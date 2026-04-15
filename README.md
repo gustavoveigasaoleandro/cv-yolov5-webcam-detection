@@ -1,22 +1,40 @@
-# YOLOv5 Webcam Detection
+# cv-yolov5-webcam-detection
 
-Notebook de estudo com deteccao de objetos em tempo real usando YOLOv5 e webcam.
+Laboratorio de visao computacional para detecao de objetos em tempo real usando YOLOv5 e webcam.
 
 ## Conteudo
 
-- `yolo_webcam_detection.ipynb`: notebook principal com instalacao de dependencias, clone do YOLOv5 e inferencia em video.
+- `yolo_webcam_detection.ipynb`: notebook demonstrando o uso de YOLOv5 para inferencia em frames da camera.
+- `requirements.txt`: dependencias diretas do experimento.
 
-## Como executar
+## Objetivo
+
+O repositorio demonstra:
+
+- configuracao de ambiente para YOLOv5;
+- uso de modelo pre-treinado;
+- captura de frames da webcam;
+- inferencia visual em tempo real;
+- separacao entre codigo proprio e repositorio de terceiros.
+
+## Dependencias Externas
+
+O codigo pode clonar ou usar o projeto oficial `ultralytics/yolov5` em tempo de execucao. A copia local completa do YOLOv5 nao foi versionada aqui para evitar republicar codigo de terceiros e artefatos desnecessarios.
+
+## Como Executar
+
+Instale dependencias basicas:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+Abra o notebook:
+
+```bash
 jupyter notebook yolo_webcam_detection.ipynb
 ```
 
-## Observacoes
+## Cuidados
 
-- O notebook baixa o repositorio `ultralytics/yolov5` em tempo de execucao.
-- Este repositorio nao inclui a copia local de `yolov5`, pesos `.pt` ou outros arquivos de terceiros para evitar publicar codigo vendorizado desnecessariamente.
-- O uso de webcam requer permissao local do sistema operacional.
+O acesso a webcam depende do sistema operacional, permissoes locais e ambiente de execucao. Este repositorio e um lab de estudo, nao uma aplicacao empacotada para distribuicao.
